@@ -13,26 +13,24 @@ exports.seed = async function (knex) {
     { recipe_id: 1, step_number: 5, step_instructions: "add suger, salt, pepper and chilli as desired" },
 
   ])
-  // await knex.table('ingredients').truncate()
-  // await knex.table('ingredients').insert([
-  //   { ingredient_name: "salt" },
-  //   { ingredient_name: "sugar" },
-  //   { ingredient_name: "pepper" },
-  //   { ingredient_name: "chilli" },
-  //   { ingredient_name: "noddles" },
-  //   { ingredient_name: "oil" },
-  // ])
-  // await knex.table('step_ingredient').truncate()
-  // await knex.table('step_ingredient').insert([
-  //   { step_id: 1, ingredient_id: 5, quantity: 1 },
-  //   { step_id: 2, ingredient_id: 1, quantity: 0.3 },
-  //   { step_id: 3 },
-  //   { step_id: 4, ingredient_id: 6, quantity: 0.7 },
-  //   { step_id: 5, ingredient_id: 3, quantity: 0.02 },
-  //   { step_id: 5, ingredient_id: 1, quantity: 0.7 },
-  //   { step_id: 5, ingredient_id: 2, quantity: 0.1 },
-  //   { step_id: 5, ingredient_id: 4, quantity: 0.2 },
-  // ])
-
-
+  await knex.table('ingredients').truncate()
+  await knex.table('ingredients').insert([
+    { ingredient_name: "salt" },
+    { ingredient_name: "sugar" },
+    { ingredient_name: "pepper" },
+    { ingredient_name: "chilli" },
+    { ingredient_name: "noddles" },
+    { ingredient_name: "oil" },
+  ])
+  await knex.table('step_ingredient').truncate()
+  await knex.table('step_ingredient').insert([
+    { step_id: 1, ingredient_id: 5, quantity: 1 },
+    { step_id: 2, ingredient_id: 1, quantity: 0.3 },
+    { step_id: 3 },
+    { step_id: 4, ingredient_id: 6, quantity: 0.7 },
+    { step_id: 5, ingredient_id: 3, quantity: 0.02 },
+    { step_id: 5, ingredient_id: 1, quantity: 0.7 },
+    { step_id: 5, ingredient_id: 2, quantity: 0.1 },
+    { step_id: 5, ingredient_id: 4, quantity: 0.2 },
+  ])
 };
